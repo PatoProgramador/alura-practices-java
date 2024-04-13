@@ -25,28 +25,32 @@ public class BankOperations {
             System.out.println(menu);
             option = input.nextInt();
 
-            if (option == 1) {
-                System.out.println(String.format("El saldo actualizado es: %, .2f $", balance));
-            } else if (option == 2) {
-                double value = 0;
-                System.out.println("¿Cuál es el valor que desea retirar?");
-                value = input.nextDouble();
-                if (value <= balance) {
-                    balance -= value;
-                    System.out.println(String.format("Saldo restante: %, .2f $", balance));
-                } else {
-                    System.out.println("Saldo insuficiente");
-                }
-            } else if (option == 3) {
-                double value = 0;
-                System.out.println("¿Cuál es el valor que desea depositar?");
-                value = input.nextDouble();
-                if (value > 0) {
-                    balance += value;
+            switch (option) {
+                case 1:
                     System.out.println(String.format("El saldo actualizado es: %, .2f $", balance));
-                } else {
-                    System.out.println("Monto invalido");
-                }
+                    break;
+                case 2:
+                    double value = 0;
+                    System.out.println("¿Cuál es el valor que desea retirar?");
+                    value = input.nextDouble();
+                    if (value <= balance) {
+                        balance -= value;
+                        System.out.println(String.format("Saldo restante: %, .2f $", balance));
+                    } else {
+                        System.out.println("Saldo insuficiente");
+                    }
+                    break;
+                case 3:
+                    double valueDeposit = 0;
+                    System.out.println("¿Cuál es el valor que desea depositar?");
+                    valueDeposit = input.nextDouble();
+                    if (valueDeposit > 0) {
+                        balance += valueDeposit;
+                        System.out.println(String.format("El saldo actualizado es: %, .2f $", balance));
+                    } else {
+                        System.out.println("Monto invalido");
+                    }
+                    break;
             }
         }
     }
