@@ -51,6 +51,12 @@ public class BankOperations {
                         System.out.println("Monto invalido");
                     }
                     break;
+                case 9:
+                    System.out.println("Saliendo del programa... gracias por utilizar nuestros servicios");
+                    break;
+                default:
+                    System.out.println("Opción no válida, por favor intenta con alguna del menu");
+                    break;
             }
         }
     }
