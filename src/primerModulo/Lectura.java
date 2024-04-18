@@ -1,3 +1,5 @@
+package primerModulo;
+
 import java.util.Scanner;
 
 public class Lectura {
@@ -7,7 +9,7 @@ public class Lectura {
         System.out.println("Escribe el nombre de tu pelicula favorita");
         String pelicula = teclado.nextLine();
         System.out.println("Ahora escribe la fecha de lanzamiento");
-        int fechaDeLanzamiento = teclado.nextInt();
+        String fechaDeLanzamiento = teclado.nextLine();
         System.out.println("Por último, dinos que nota le das a esta película");
         double nota = teclado.nextDouble();
 
